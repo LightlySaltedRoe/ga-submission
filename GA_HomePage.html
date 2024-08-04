@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Finance App - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdf2e9;
+        }
+        .navbar {
+            padding: 1rem 2rem;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .nav-link {
+            color: #000;
+        }
+        .nav-link:hover {
+            color: #555;
+        }
+        .nav-link.active {
+            color: #000;
+            font-weight: bold;
+        }
+        .container-fluid {
+            padding-top: 2rem;
+        }
+        .row {
+            margin-bottom: 2rem;
+        }
+        .col-md-2 {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-right: 1px solid #eeeeee;
+            height: 100vh;
+        }
+        .col-md-10 {
+            padding: 2rem;
+        }
+        .highlight {
+            font-size: 2.5rem;
+            color: #ff6b6b;
+        }
+        .status-online {
+            color: #21bf73;
+        }
+        .status-offline {
+            color: #ff6b6b;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        .card-header {
+            background-color: #fdf2e9;
+            font-size: 1.2rem;
+            border-bottom: none;
+        }
+        .card-body {
+            background-color: #ffffff;
+            color: #333;
+            padding: 2rem;
+        }
+        .overview, .finance, .calendar, .events {
+            color: #000;
+            margin-right: 15px;
+        }
+        .search-box {
+            margin-right: 15px;
+        }
+        .dashboard-container {
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .wallet-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .wallet-header h2 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .wallet-header .btn {
+            background-color: #ff6b6b;
+            color: #fff;
+            border: none;
+        }
+        .wallet-header .btn:hover {
+            background-color: #e55d5d;
+        }
+        .categories, .calendar, .biggest-expense {
+            margin-top: 2rem;
+        }
+        .categories .card, .biggest-expense .card {
+            padding: 0;
+        }
+        .categories .card-body, .biggest-expense .card-body {
+            padding: 1rem;
+        }
+        .categories img, .biggest-expense img {
+            max-width: 100%;
+            height: auto;
+        }
+        .calendar table {
+            width: 100%;
+            margin-top: 1rem;
+        }
+        .calendar th, .calendar td {
+            padding: 10px;
+            text-align: center;
+        }
+        .calendar th {
+            background-color: #f5f5f5;
+        }
+        .calendar td {
+            background-color: #fff;
+        }
+        .calendar .active {
+            background-color: #ff6b6b;
+            color: #fff;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><b><i>Ethan Accounting</i></b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="GA_HomePage.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="GA_ContactUs.html">Contact Us</a>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.MDcrFHdvxmDJfHY_INvluAHaE8&pid=Api&P=0&h=180" style="width: 25px; margin-top: 5px;">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">English</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <nav class="nav flex-column">
+                    <a class="nav-link active" href="#">Dashboard</a>
+                    <a class="nav-link" href="GA_Profile.html">Profile</a>
+                    <a class="nav-link" href="GA_UserSpending.html">Track Spendings</a>
+                    <a class="nav-link" href="GA_UserWants.html">Update Financial Goals</a>
+                    <a class="nav-link" href="GA_RegisteredCards.html">Cards</a>
+                    <a class="nav-link" href="GA_FinancialPlanning.html">Budgeting</a>
+                </nav>
+            </div>
+            <div class="col-md-10">
+                <div class="wallet-header">
+                    <h2>Home Wallet</h2>
+                    
+                </div>
+                <div class="dashboard-container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">Expenses</div>
+                                <div class="card-body">
+                                    <p class="highlight">$24,500</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">Expense & Revenues</div>
+                                <div class="card-body">
+                                    <p class="highlight">$10,500</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">Revenues</div>
+                                <div class="card-body">
+                                    <p class="highlight">$14,455</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">Budget</div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="progress" style="height: 20px;">
+                                                <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+<p>Spent: $24,500</p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p>Monthly Limit: $35,000</p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p>Remaining: $3,000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row categories">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">Categories with Biggest Expense</div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="https://static.vecteezy.com/system/resources/previews/019/787/018/original/shopping-cart-icon-shopping-basket-on-transparent-background-free-png.png" alt="Category">
+                                            <p>Shopping: $1,200</p>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <img src="https://cdn0.iconfinder.com/data/icons/shopping-194/64/shirt-clothes-1024.png" alt="Category">
+                                            <p>Clothes: $2,500</p>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <img src="https://static.vecteezy.com/system/resources/previews/000/350/939/original/camera-vector-icon.jpg" alt="Category">
+                                            <p>Camera: $3,500</p>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <img src="https://static.vecteezy.com/system/resources/previews/000/366/438/original/home-vector-icon.jpg" alt="Category">
+                                            <p>Home Loan: $4,500</p>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <img src="https://www.pngitem.com/pimgs/m/377-3778750_gift-icon-clipart-png-download-icon-of-gift.png" alt="Category">
+                                            <p>Gift: $1,200</p>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <img src="https://tse3.mm.bing.net/th?id=OIP.6tcS1ZE8sOj1IzU8CMsqTgHaHa&pid=Api&P=0&h=180" alt="Category">
+                                            <p>Loan: $4,500</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

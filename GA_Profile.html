@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Financial App</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .profile-header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .profile-info, .account-settings, .financial-summary, .add-card {
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: #ffffff;
+            margin-bottom: 20px;
+        }
+        .financial-summary .summary-item {
+            margin-bottom: 10px;
+        }
+        .financial-summary .summary-item span {
+            font-weight: bold;
+        }
+        .dropdown-toggle::after {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><b><i>Ethan Accounting</i></b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="GA_HomePage.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="GA_AboutUs.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="GA_ContactUs.html">Contact Us</a>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.MDcrFHdvxmDJfHY_INvluAHaE8&pid=Api&P=0&h=180" style="width: 25px; margin-top: 5px;">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">English</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="profile-header">
+            <img src="https://www.thefamouspeople.com/profiles/images/harry-kane-2.jpg" alt="User Avatar">
+            <h1>John Doe</h1>
+            <p>Welcome back to Ethan Accounting, John!</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="profile-info">
+                    <h3>Personal Information</h3>
+                    <p><strong>Email:</strong> john.doe@example.com</p>
+                    <p><strong>Phone:</strong> (123) 456-7890</p>
+                    <p><strong>Address:</strong> 123 Main St, Anytown, USA</p>
+                    <p><strong>Date of Birth:</strong> January 1, 1980</p>
+                </div>
+                <div class="account-settings">
+                    <h3>Account Settings</h3>
+                    <div class="accordion" id="accountSettingsAccordion">
+                        <div class="card">
+                            <div class="card-header" id="headingPassword">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapsePassword" aria-expanded="true" aria-controls="collapsePassword">
+                                        Change Password
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapsePassword" class="collapse" aria-labelledby="headingPassword" data-parent="#accountSettingsAccordion">
+                                <div class="card-body">
+                                    <form onsubmit="showModal('Password updated successfully!'); return false;">
+                                        <div class="form-group">
+                                            <label for="currentPassword">Current Password</label>
+                                            <input type="password" class="form-control" id="currentPassword" placeholder="Enter current password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="newPassword">New Password</label>
+                                            <input type="password" class="form-control" id="newPassword" placeholder="Enter new password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="confirmPassword">Confirm New Password</label>
+                                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm new password">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-block">Update Password</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingEmail">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseEmail" aria-expanded="false" aria-controls="collapseEmail">
+                                        Update Email
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseEmail" class="collapse" aria-labelledby="headingEmail" data-parent="#accountSettingsAccordion">
+                                <div class="card-body">
+                                    <form onsubmit="showModal('Email updated successfully!'); return false;">
+                                        <div class="form-group">
+                                            <label for="newEmail">New Email</label>
+                                            <input type="email" class="form-control" id="newEmail" placeholder="Enter new email">
+                                        </div>
+                                        <button type="submit" class="btn btn-secondary btn-block">Update Email</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingPhone">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapsePhone" aria-expanded="false" aria-controls="collapsePhone">
+                                        Update Phone Number
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapsePhone" class="collapse" aria-labelledby="headingPhone" data-parent="#accountSettingsAccordion">
+                                <div class="card-body">
+                                    <form onsubmit="showModal('Phone number updated successfully!'); return false;">
+                                        <div class="form-group">
+                                            <label for="newPhone">New Phone Number</label>
+                                            <input type="text" class="form-control" id="newPhone" placeholder="Enter new phone number">
+                                        </div>
+                                        <button type="submit" class="btn btn-secondary btn-block">Update Phone Number</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-card">
+                    <h3>Add New Card</h3>
+                    <form onsubmit="showModal('New card added successfully!'); return false;">
+                        <div class="form-group">
+                            <label for="cardName">Card Name</label>
+                            <input type="text" class="form-control" id="cardName" placeholder="Enter card name">
+                        </div>
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" class="form-control" id="cardNumber" placeholder="Enter card number">
+                        </div>
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date</label>
+                            <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" class="form-control" id="cvv" placeholder="Enter CVV">
+                        </div>
+                        <button type="submit" class="btn btn-secondary btn-block">Add Card</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="financial-summary">
+                    <h3>Financial Summary</h3>
+                    <div class="summary-item">
+                        <span>Current Balance:</span> $5,000
+                    </div>
+                    <div class="summary-item">
+                        <span>Monthly Income:</span> $3,500
+                    </div>
+                    <div class="summary-item">
+                        <span>Monthly Expenses:</span> $2,000
+                    </div>
+                    <div class="summary-item">
+                        <span>Savings Rate:</span> 30%
+                    </div>
+                    <div class="summary-item">
+                        <span>Investment Portfolio:</span> $15,000
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateModalLabel">Update</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="updateModalMessage"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6-beta.14/jquery.inputmask.min.js"></script>
+    <script>
+        function showModal(message) {
+            document.getElementById('updateModalMessage').innerText = message;
+            $('#updateModal').modal('show');
+        }
+
+        $(document).ready(function () {
+            $('#cardNumber').inputmask("9999 9999 9999 9999");
+            $('#expiryDate').inputmask("99/99");
+            $('#cvv').inputmask("999");
+        });
+    </script>
+</body>
+</html>

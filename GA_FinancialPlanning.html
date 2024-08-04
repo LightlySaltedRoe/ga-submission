@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Financial Planning</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .spending-category, .suggestions {
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+        }
+        .suggestions {
+            border-color: #28a745;
+            background-color: #e9f7ef;
+        }
+        .heading {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><b><i>Ethan Accounting</i></b> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="GA_HomePage.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="GA_AboutUs.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="GA_ContactUs.html">Contact Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="GA_Profile.html">Profile</a>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.MDcrFHdvxmDJfHY_INvluAHaE8&pid=Api&P=0&h=180" style="width: 25px; margin-top: 5px;">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">English</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="heading text-center">
+            <h1>Hey John, Let's look through your spendings for the month</h1>
+            <p>Here are some ways we have found for you to cut your current cost</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="spending-category">
+                    <h3>Current Spending</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Rent
+                            <span class="badge badge-primary badge-pill">$1200</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Groceries
+                            <span class="badge badge-primary badge-pill">$300</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Utilities
+                            <span class="badge badge-primary badge-pill">$150</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Entertainment
+                            <span class="badge badge-primary badge-pill">$200</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Transportation
+                            <span class="badge badge-primary badge-pill">$100</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="suggestions">
+                    <h3>Saving Suggestions</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Move to a cheaper apartment
+                            <span class="badge badge-success badge-pill">Save $200</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <button class="btn btn-link p-0" data-toggle="collapse" data-target="#discountStores" aria-expanded="false" aria-controls="discountStores">
+                                Shop at discount stores
+                            </button>
+                            <span class="badge badge-success badge-pill">Save $50</span>
+                        </li>
+                        <div id="discountStores" class="collapse ml-3">
+                            <ul class="list-group">
+                                <li class="list-group-item">- Discount Mart, 123 Elm St</li>
+                                <li class="list-group-item">- Budget Groceries, 456 Oak St</li>
+                                <li class="list-group-item">- Save-A-Lot, 789 Pine St</li>
+                            </ul>
+                        </div>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Reduce utility usage
+                            <span class="badge badge-success badge-pill">Save $30</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <button class="btn btn-link p-0" data-toggle="collapse" data-target="#eatOut" aria-expanded="false" aria-controls="eatOut">
+                                Limit eating out
+                            </button>
+                            <span class="badge badge-success badge-pill">Save $50</span>
+                        </li>
+                        <div id="eatOut" class="collapse ml-3">
+                            <ul class="list-group">
+                                <li class="list-group-item">- Eat at Home</li>
+                                <li class="list-group-item">- Local Food Trucks</li>
+                                <li class="list-group-item">- Cheap Eats Diner, 321 Maple Ave</li>
+                            </ul>
+                        </div>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <button class="btn btn-link p-0" data-toggle="collapse" data-target="#publicTransport" aria-expanded="false" aria-controls="publicTransport">
+                                Use public transportation
+                            </button>
+                            <span class="badge badge-success badge-pill">Save $30</span>
+                        </li>
+                        <div id="publicTransport" class="collapse ml-3">
+                            <ul class="list-group">
+                                <li class="list-group-item">- Bus Route 5: Main St to Downtown</li>
+                                <li class="list-group-item">- Metro Line A: Uptown to Midtown</li>
+                                <li class="list-group-item">- Bike Share Program, Various Locations</li>
+                            </ul>
+                        </ul>
+                        <p class="text-right">Total Savings: <span id="total-savings">$460</span></p>
+                    </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

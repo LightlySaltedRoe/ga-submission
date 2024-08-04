@@ -1,0 +1,42 @@
+body {
+    background-color: #000; /* black background */
+    color: #ffffff; /* white text */
+  }
+  
+  .navbar-light {
+    background-color: #000; /* black background for navbar */
+  }
+  
+  .navbar-brand, .nav-link {
+    color: #fff; /* white text for navbar brand and links */
+  }
+  
+  .navbar-brand:hover, .nav-link:hover {
+    color: #ffffff; /* light gray text on hover for navbar brand and links */
+  }
+  
+  .jumbotron {
+    background-color: #ffffff; /* black background for jumbotron */
+    color: #0c0707; /* white text for jumbotron */
+  }
+  
+  h1, h2, p {
+    color: #0a0909; /* white text for headings and paragraphs */
+  }
+
+  h3 {
+    color: white;
+  }
+  
+  .btn-primary {
+    background-color: #fff; /* white background for primary button */
+    color: #000; /* black text for primary button */
+    border-color: #fff; /* white border for primary button */
+  }
+  
+  .btn-primary:hover {
+    background-color: #ffffff; /* light gray background on hover for primary button */
+    color: #000; /* black text on hover for primary button */
+    border-color: #ffffff; /* light gray border on hover for primary button */
+  }
+

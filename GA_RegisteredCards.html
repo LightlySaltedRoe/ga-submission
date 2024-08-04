@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Cards</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        /* inline CSS styles */
+        .card-list {
+            margin-top: 20px;
+        }
+        .card-item {
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .card-brand {
+            font-size: 18px;
+            font-weight: bold;
+            color: #337ab7; /* blue color */
+        }
+        .card-expiry {
+            font-size: 14px;
+            color: #666;
+        }
+        .card-body {
+            background-color: #f7f7f7; /* light gray background */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .btn-primary {
+            background-color: #007bff; /* blue button color */
+            border-color: #007bff;
+        }
+        .btn-danger {
+            background-color: #dc3545; /* red button color */
+            border-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><b><i>Ethan Accounting</i></b> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="GA_HomePage.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="GA_AboutUs.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="GA_ContactUs.html">Contact Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="GA_Profile.html">Profile</a>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.MDcrFHdvxmDJfHY_INvluAHaE8&pid=Api&P=0&h=180" style="width: 25px; margin-top: 5px;">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">English</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="text-center" style="color: #337ab7;">Registered Cards</h1>
+        <div class="card-list">
+            <div class="card-item">
+                <div class="card mb-3" style="max-width: 540px; background-color: #fff; border: 1px solid #ddd;">
+                    <div class="row no-gutters">
+                        <div class="col-md-2" style="background-color: #337ab7; padding: 20px; border-radius: 10px 0 0 10px;">
+                            <i class="fas fa-credit-card" style="font-size: 40px; color: #fff;"></i>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Visa Card</h5>
+                                <p class="card-text">Card number: ************1234</p>
+                                <p class="card-expiry">Expiry: 02/2025</p>
+                                <button class="btn btn-primary btn-sm">Edit</button>
+                                <button class="btn btn-danger btn-sm">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-item">
+                <div class="card mb-3" style="max-width: 540px; background-color: #fff; border: 1px solid #ddd;">
+                    <div class="row no-gutters">
+                        <div class="col-md-2" style="background-color: #f7a529; padding: 20px; border-radius: 10px 0 0 10px;">
+                            <i class="fas fa-credit-card" style="font-size: 40px; color: #fff;"></i>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Mastercard</h5>
+                                <p class="card-text">Card number: ************5678</p>
+                                <p class="card-expiry">Expiry: 08/2024</p>
+                                <button class="btn btn-primary btn-sm">Edit</button>
+                                <button class="btn btn-danger btn-sm">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-item">
+                <div class="card mb-3" style="max-width: 540px; background-color: #fff; border: 1px solid #ddd;">
+                    <div class="row no-gutters">
+                        <div class="col-md-2" style="background-color: #28a745; padding: 20px; border-radius: 10px 0 0 10px;">
+                            <i class="fas fa-credit-card" style="font-size: 40px; color: #fff;"></i>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">American Express</h5>
+                                <p class="card-text">Card number: ************9012</p>
+                                <p class="card-expiry">Expiry: 12/2023</p>
+                                <button class="btn btn-primary btn-sm">Edit</button>
+                                <button class="btn btn-danger btn-sm">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-item">
+                <div class="card mb-3" style="max-width: 540px; background-color: #fff; border: 1px solid #ddd;">
+                    <div class="row no-gutters">
+                        <div class="col-md-2" style="background-color: #6c757d; padding: 20px; border-radius: 10px 0 0 10px;">
+                            <i class="fas fa-credit-card" style="font-size: 40px; color: #fff;"></i>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Discover Card</h5>
+                                <p class="card-text">Card number: ************3456</p>
+                                <p class="card-expiry">Expiry: 05/2026</p>
+                                <button class="btn btn-primary btn-sm">Edit</button>
+                                <button class="btn btn-danger btn-sm">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- add more card items here -->
+        </div>
+    </div>
+</body>
+</html>
